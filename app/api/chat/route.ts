@@ -4,7 +4,6 @@ import {vectorStore} from "@/pinecone/vector-store";
 import {ChatPromptTemplate} from "@langchain/core/prompts";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import { createRetrievalChain } from "langchain/chains/retrieval";
-import {Readable} from "node:stream";
 
 const systemPrompt = `
 You are a legal assistant trained to analyze legal documents and answer questions based on the information provided in those documents. Below is the query you need to answer based on the legal documents available.

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import {pinecone, vectorStore} from "@/pinecone/vector-store";
+import {vectorStore} from "@/pinecone/vector-store";
 import {RecursiveCharacterTextSplitter} from "@langchain/textsplitters";
 
 export async function POST(request: Request) {
