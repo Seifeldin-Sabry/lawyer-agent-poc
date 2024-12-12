@@ -9,9 +9,13 @@ export async function POST(request: Request) {
     if (!file) {
         return NextResponse.json({ error: 'No file uploaded' }, new Response(null, { status: 400 }))
     }
-
     try {
         await vectorStore.delete({deleteAll: true})
+    }catch (e){
+        console.error('Error deleting documents:', e)
+    }
+
+    try {
 
         const text = await file.text()
 
